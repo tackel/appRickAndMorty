@@ -86,6 +86,18 @@ export default function LoginComponent() {
   const changeForm = () => {
     setIsSignUp(value => !value);
   };
+
+  const hangleReset = async () => {
+    try {
+      const {data, error} = await supabase.auth.api.resetPasswordForEmail(
+        email,
+      );
+      if (error) throw error;
+      alert('Se envio un correo para el reset');
+    } catch (e) {
+      alert(e.message);
+    }
+  };
   return (
     <ScreenImage source={require('../../../assets/images/rym2.jpg')}>
       <StatusBar barStyle="light-content" />
@@ -137,6 +149,9 @@ export default function LoginComponent() {
             <TextButton style={{color: 'blue'}}>
               {!isSignUp ? 'Are you account? Sign In' : 'Are you new? Sign Up'}
             </TextButton>
+          </TouchableOpacity>
+          <TouchableOpacity style={{padding: 10}} onPress={hangleReset}>
+            <TextButton style={{color: 'blue'}}>Reset Password</TextButton>
           </TouchableOpacity>
         </View>
       </ScreenBottom>

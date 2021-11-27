@@ -145,12 +145,12 @@ export default function LoginComponent() {
             )}
           </Button>
 
-          <TouchableOpacity style={{padding: 10}} onPress={changeForm}>
+          <TouchableOpacity style={{padding: 0}} onPress={changeForm}>
             <TextButton style={{color: 'blue'}}>
               {!isSignUp ? 'Are you account? Sign In' : 'Are you new? Sign Up'}
             </TextButton>
           </TouchableOpacity>
-          <TouchableOpacity style={{padding: 10}} onPress={hangleReset}>
+          <TouchableOpacity style={{padding: 0}} onPress={hangleReset}>
             <TextButton style={{color: 'blue'}}>Reset Password</TextButton>
           </TouchableOpacity>
         </View>

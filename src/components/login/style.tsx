@@ -5,7 +5,7 @@ const InputWrapper = styled.View<{focused?: string}>`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 `;
 
 const IconContainer = styled.View<{focused?: string}>`
@@ -39,7 +39,7 @@ const Label = styled.Text`
   font-family: 'Arbutus-Regular';
   font-size: 25px;
   text-transform: capitalize;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   padding: 10px;
 `;
 

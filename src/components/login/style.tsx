@@ -65,7 +65,7 @@ const ScreenBottom = styled.View`
   position: absolute;
   bottom: 0%;
   padding: 10px;
-  background-color: #c4fff8;
+  background-color: rgba(196, 255, 248, 0.6);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 `;

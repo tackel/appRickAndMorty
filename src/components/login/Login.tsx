@@ -46,10 +46,16 @@ export default function LoginComponent() {
 
     if (password.length >= 8 && trueMail) {
       try {
-        const {user, session, error} = await supabase.auth.signUp({
-          email,
-          password,
-        });
+        const {user, session, error} = await supabase.auth.signUp(
+          {
+            email,
+            password,
+          },
+          {
+            redirectTo:
+              'https://reset-ry-m-mp6j00d8r-tackel.vercel.app/logo192.png',
+          },
+        );
         if (error) throw error;
         alert('Confirme la Suscripcion en su Mail y Podra Loguearse.');
         //handleLogin ? handleLogin() : null;

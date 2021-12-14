@@ -53,7 +53,7 @@ export default function LoginComponent() {
           },
           {
             redirectTo:
-              'https://reset-ry-m-mp6j00d8r-tackel.vercel.app/logo512.png',
+              'https://reset-ry-m-mp6j00d8r-tackel.vercel.app/registered',
           },
         );
         if (error) throw error;
@@ -98,7 +98,7 @@ export default function LoginComponent() {
       const {data, error} = await supabase.auth.api.resetPasswordForEmail(
         email,
         {
-          redirectTo: 'https://reset-ry-m-mp6j00d8r-tackel.vercel.app',
+          redirectTo: 'https://reset-ry-m-mp6j00d8r-tackel.vercel.app/reset',
         },
       );
       if (error) throw error;

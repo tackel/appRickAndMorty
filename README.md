@@ -14,3 +14,9 @@ personajes, lugares y episodios. En el drawer tienen funciones: ir a la app, ver
 Los datos se obtuvieron mediante apollo client utilizando graphql
 
 El codigo fue realizado para funcionar con android, ya que no cuento con equipo para desarrollarlo en ios.
+
+Al hacer la intalacion de los modulos debe cambiarse una linea de codigo para que no de error el modulo @supabase. 
+Entrar en: node_modules\@supabase\gotrue-js\dist\main\lib\helpers.js
+y modificar la linea 19 del archivo helpers.js: if (!url) url = window.location.href 
+por esta: if (!url) url = window.location && window.location.href || "";  
+

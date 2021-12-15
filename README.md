@@ -12,3 +12,5 @@ Repositorio del reset: https://github.com/tackel/resetRyM
 La app esta hecha con React-native y typeScript. Contiene 3 items en el botton tabs: 
 personajes, lugares y episodios. En el drawer tienen funciones: ir a la app, ver datos del sistema, logout y cerrar el drawer. 
 Los datos se obtuvieron mediante apollo client utilizando graphql
+
+El codigo fue realizado para funcionar con android, ya que no cuento con equipo para desarrollarlo en ios.
